@@ -1,0 +1,20 @@
+.banner{
+    height: 75vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #050505;
+    color: white;
+    font-family: 'Lobster', cursive;
+}
+
+.banner span{
+    color: rgb(0, 255, 21);
+}
+
+
+.banner-image img{
+    width: 500px;
+    height: 400px;
+   
+}
