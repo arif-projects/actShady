@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import { Row } from 'react-bootstrap';
 
 import './Testimonial.css'
 
@@ -14,9 +15,10 @@ const Testimonial = () => {
         <div id = "testimonial" className = "testimonial my-5">
           <h1 className="header-title">What Client Say</h1>
           <div className="container">
-              <div className="row">
+          <Row xs={1} sm={2} md={3} style={{ rowGap: "20px", marginTop: "3rem" }}>
                 {
-                    testimonials.map(testimonial=><div className = "col-md-4 p-5 shadow single-testimonial mx-3">
+                    testimonials.map(testimonial=><Row>
+                    <div className = "col-md-4 p-5 shadow single-testimonial mx-3">
 
                         <div className="image-area">
                          <img className ="w-25 rounded-circle" src={testimonial.image} alt="" />
@@ -26,9 +28,10 @@ const Testimonial = () => {
                           <p>{testimonial.position}</p>
                           <p>{testimonial.description}</p>
                       </div>
-                    </div>)
+                    </div>
+                    </Row>)
                 }
-              </div>
+              </Row>
           </div>
         </div>
     );

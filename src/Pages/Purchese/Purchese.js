@@ -104,7 +104,7 @@ const Purchese = () => {
                  <input type="text" value = {product.name} ref = {productNameRef} disabled/>
                  <input type="number" value = {product.price} ref = {productPriceRef} id="" disabled />
                  <textarea type="text" value = {product.description} ref = {productDescriptionRef}  disabled/>
-                 <input className = "btn btn-success" type="submit" value="Purchese Item" />
+                 <input  className = "btn btn-success" type="submit"  value="Purchese Item" />
             </form>
 
 

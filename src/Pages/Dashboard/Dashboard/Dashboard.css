@@ -1,4 +1,3 @@
-.dashboard #Link{
-   
+.dashboard a:link {
     text-decoration: none;
-}
+  }

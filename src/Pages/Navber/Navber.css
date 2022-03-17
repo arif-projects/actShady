@@ -1,3 +1,7 @@
 .navber{
+    font-family: 'Lobster', cursive;
     color: white;
+}
+.menu-item{
+    font-size: 18px;
 }

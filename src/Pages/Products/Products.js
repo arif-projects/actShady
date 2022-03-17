@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Product.css'
 import Product from '../Product/Product';
+import { Row } from 'react-bootstrap';
 
 const Products = () => {
     const [products,setproducts] = useState([]);
@@ -15,14 +16,14 @@ const Products = () => {
             <div id = "features" className="products-container">
                 <h1 className = "mt-5 header-title">Feature Products</h1>
                 <div className="container">
-                    <div className="row ">
+                <Row xs={1} sm={2} md={3} style={{ rowGap: "20px", marginTop: "3rem" }}> 
                         {
                           products.slice(0,6).map(product=><Product
                           key = {product._id}
                           product = {product}
                           ></Product>)
                         }
-                    </div>
+                    </Row>
                 </div>
             </div>
             

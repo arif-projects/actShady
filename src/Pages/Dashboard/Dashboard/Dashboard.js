@@ -17,6 +17,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { FcHome } from "react-icons/fc";
 import {
   BrowserRouter as Router,
   Switch,
@@ -90,16 +91,23 @@ function Dashboard(props) {
 
       {/* setting dynamic Navber  */}
 
-      <Nav.Link as={HashLink} to="/home#home"><Button color="inherit">Home</Button></Nav.Link>
-      <Link to={`${url}`}><Button color="inherit">Dashboard</Button></Link> <br />
+      <Nav.Link as={HashLink} to="/home#home"><Button color="inherit"><FcHome/>Home</Button></Nav.Link>
+      <h6 className = "text text-primary fw-bold">For User</h6>
+      <Link to={`${url}`}><Button variant="outlined">Dashboard</Button></Link>
+      <br /> <br />
+      <Link to={`${url}/addReview`}><Button variant="outlined">Review</Button></Link> 
+      <br /><br />
 
-      <Link to={`${url}/allProducts`}><Button color="primary">All product</Button></Link> <br />
-      <Link to={`${url}/allOrders`}><Button color="primary">All Orders</Button></Link> <br />
+      <Divider />
 
-      <Link to={`${url}/addProducts`}><Button color="primary">Add product</Button></Link>
-      <br />
-      <Link to={`${url}/addReview`}><Button color="primary">Review</Button></Link> <br />
-      <Link to={`${url}/makeAdmin`}><Button color="primary">MAke Admin</Button></Link><br />
+      <h6 className = "text text-primary fw-bold">For Admin</h6>
+      <Link to={`${url}/allProducts`}><Button variant="outlined">All product</Button></Link>
+      <br /> <br />
+      <Link to={`${url}/allOrders`}><Button variant="outlined">All Orders</Button></Link>
+      <br /> <br /> 
+      <Link to={`${url}/addProducts`}><Button variant="outlined">Add product</Button></Link>
+      <br /> <br />
+      <Link to={`${url}/makeAdmin`}><Button variant="outlined">MAke Admin</Button></Link><br />
       {/* <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
